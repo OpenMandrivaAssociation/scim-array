@@ -10,6 +10,7 @@ Group:		System/Internationalization
 License:	GPL
 URL:		http://scimarray.openfoundry.org/
 Source:		http://rt.openfoundry.org/Foundry/Project/Download/Attachment/91593/62957/%{name}-%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	scim-devel >= %{scim_version}
 Requires:	scim >= %{scim_version}
 Requires:	%{libname} = %{version}-%{release}
