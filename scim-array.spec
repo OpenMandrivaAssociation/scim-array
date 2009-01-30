@@ -5,11 +5,12 @@
 Name:		scim-array
 Summary:	SCIM Array 30 Input Method Engine
 Version:	1.0.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		System/Internationalization
 License:	GPLv2+
 URL:		http://scimarray.openfoundry.org/
 Source:		http://of.openfoundry.org/download_path/scimarray/%{version}/%{name}-%{version}.tar.gz
+Patch0:		scim-array-1.0.1-fix-linkage.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	scim-devel >= %{scim_version}
 Requires:	scim-client = %{scim_api}
@@ -23,6 +24,7 @@ short codes, special codes, and symbol input.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x
