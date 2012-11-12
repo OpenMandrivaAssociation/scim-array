@@ -1,0 +1,47 @@
+--- src/Makefile.am~	2008-01-25 08:13:26.000000000 +0100
++++ src/Makefile.am	2009-01-30 22:12:48.000000000 +0100
+@@ -33,8 +33,8 @@
+ 
+ array_la_LDFLAGS	= -avoid-version \
+ 		     	  -rpath $(moduledir) \
+-			  -module \
+-			  @INTLLIBS@ \
++			  -module
++array_la_LIBADD	  	= @INTLLIBS@ \
+ 			  @SCIM_LIBS@
+ 
+ 
+@@ -58,7 +58,7 @@
+ array_imengine_setup_la_LDFLAGS = -avoid-version \
+ 								   -rpath $(setupmoduledir) \
+ 								   -module \
+-								   @LIBTOOL_EXPORT_OPTIONS@ \
+-								   @SCIM_GTKUTILS_LIBS@ \
++								   @LIBTOOL_EXPORT_OPTIONS@
++array_imengine_setup_la_LIBADD  = @SCIM_GTKUTILS_LIBS@ \
+ 								   @INTLLIBS@ \
+ 								   @SCIM_LIBS@
+--- src/Makefile.in~	2008-11-08 17:04:38.000000000 +0100
++++ src/Makefile.in	2009-01-30 22:14:13.000000000 +0100
+@@ -262,8 +262,8 @@
+ array_la_CXXFLAGS = @SCIM_CFLAGS@ $(array_DEFINES)
+ array_la_LDFLAGS = -avoid-version \
+ 		     	  -rpath $(moduledir) \
+-			  -module \
+-			  @INTLLIBS@ \
++			  -module
++array_la_LIBADD = @INTLLIBS@ \
+ 			  @SCIM_LIBS@
+ 
+ @SCIM_BUILD_SETUP_TRUE@SETUP_MODULE = array-imengine-setup.la
+@@ -281,8 +281,8 @@
+ array_imengine_setup_la_LDFLAGS = -avoid-version \
+ 								   -rpath $(setupmoduledir) \
+ 								   -module \
+-								   @LIBTOOL_EXPORT_OPTIONS@ \
+-								   @SCIM_GTKUTILS_LIBS@ \
++								   @LIBTOOL_EXPORT_OPTIONS@
++array_imengine_setup_la_LIBADD = @SCIM_GTKUTILS_LIBS@ \
+ 								   @INTLLIBS@ \
+ 								   @SCIM_LIBS@
+ 
