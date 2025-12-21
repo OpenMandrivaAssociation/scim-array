@@ -12,6 +12,11 @@ URL:		https://scimarray.openfoundry.org/
 Source:		http://of.openfoundry.org/download_path/scimarray/%{version}/%{name}-%{version}.tar.gz
 Patch0:		scim-array-1.0.1-fix-linkage.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	scim-devel >= %{scim_version}
 Requires:	scim-client = %{scim_api}
 Obsoletes:	%{libname}
