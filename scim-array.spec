@@ -5,7 +5,7 @@
 Name:		scim-array
 Summary:	SCIM Array 30 Input Method Engine
 Version:	1.0.1
-Release:	%mkrel 2
+Release:	3
 Group:		System/Internationalization
 License:	GPLv2+
 URL:		https://scimarray.openfoundry.org/
